@@ -75,7 +75,7 @@ namespace Librart_Management_System
             // Log_UserName_TextBox
             // 
             this.Log_UserName_TextBox.BackColor = System.Drawing.Color.Peru;
-            this.Log_UserName_TextBox.Location = new System.Drawing.Point(171, 57);
+            this.Log_UserName_TextBox.Location = new System.Drawing.Point(183, 57);
             this.Log_UserName_TextBox.Multiline = true;
             this.Log_UserName_TextBox.Name = "Log_UserName_TextBox";
             this.Log_UserName_TextBox.Size = new System.Drawing.Size(214, 30);
@@ -84,7 +84,7 @@ namespace Librart_Management_System
             // Log_Password_TextBox
             // 
             this.Log_Password_TextBox.BackColor = System.Drawing.Color.Peru;
-            this.Log_Password_TextBox.Location = new System.Drawing.Point(171, 123);
+            this.Log_Password_TextBox.Location = new System.Drawing.Point(183, 123);
             this.Log_Password_TextBox.Multiline = true;
             this.Log_Password_TextBox.Name = "Log_Password_TextBox";
             this.Log_Password_TextBox.PasswordChar = '*';

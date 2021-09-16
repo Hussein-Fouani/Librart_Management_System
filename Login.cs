@@ -24,10 +24,17 @@ namespace Librart_Management_System
 
         private void Log_button_Click(object sender, EventArgs e)
         {
-            LibraryMS library = new LibraryMS();
-            this.Hide();
-            library.Show();
-            
+            if (Log_UserName_TextBox.Text == "Admin" && Log_Password_TextBox.Text=="Password")
+            {
+                LibraryMS library = new LibraryMS();
+                this.Hide();
+                library.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid Login Credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
