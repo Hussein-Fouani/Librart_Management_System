@@ -100,6 +100,7 @@ namespace Librart_Management_System
             this.Log_button.TabIndex = 5;
             this.Log_button.Text = "Login";
             this.Log_button.UseVisualStyleBackColor = true;
+            this.Log_button.Click += new System.EventHandler(this.Log_button_Click);
             // 
             // Exit_button
             // 

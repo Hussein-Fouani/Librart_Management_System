@@ -21,5 +21,13 @@ namespace Librart_Management_System
         {
             Application.Exit();
         }
+
+        private void Log_button_Click(object sender, EventArgs e)
+        {
+            LibraryMS library = new LibraryMS();
+            this.Hide();
+            library.Show();
+            
+        }
     }
 }
