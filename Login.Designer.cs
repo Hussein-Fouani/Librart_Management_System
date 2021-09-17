@@ -46,9 +46,9 @@ namespace Librart_Management_System
             this.Login_UserName_Label.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Login_UserName_Label.Location = new System.Drawing.Point(96, 59);
             this.Login_UserName_Label.Name = "Login_UserName_Label";
-            this.Login_UserName_Label.Size = new System.Drawing.Size(81, 17);
+            this.Login_UserName_Label.Size = new System.Drawing.Size(54, 17);
             this.Login_UserName_Label.TabIndex = 0;
-            this.Login_UserName_Label.Text = "UserName: ";
+            this.Login_UserName_Label.Text = "UserID: ";
             // 
             // linkLabel1
             // 

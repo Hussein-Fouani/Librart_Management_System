@@ -86,7 +86,7 @@ namespace Librart_Management_System
 
         private void memberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Member member = new member();
+            Member member = new Member();
             member.MdiParent = this;
             member.Show();
             member.StartPosition = FormStartPosition.CenterScreen;
