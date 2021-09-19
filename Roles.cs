@@ -42,7 +42,9 @@ namespace Librart_Management_System
         {
           
             CreateNewData();
-            
+            ViewDataInGrid();
+
+
         }
         
         void CreateNewData()
@@ -74,6 +76,25 @@ namespace Librart_Management_System
             status_cmbbx.SelectedItem = -1;
             MessageBox.Show("Saved","Done",MessageBoxButtons.OK,MessageBoxIcon.Information);
             CreateNewData();
+            ViewDataInGrid();
+        }
+        void ViewDataInGrid()
+        {
+            Connection connection = new();
+            SqlDataAdapter adapter = new("Select * from Role_Master",connection.ActiveConection());
+            DataTable dt = new();
+            adapter.Fill(dt);
+            Role_Grid_view.Rows.Clear();
+            foreach (DataRow row in dt.Rows)
+            {
+                int dtb = Role_Grid_view.Rows.Add();
+                Role_Grid_view.Rows[dtb].Cells[1].Value = (dtb + 1).ToString();
+               Role_Grid_view.Rows[dtb].Cells[1].Value = row["Role_ID"].ToString();
+                Role_Grid_view.Rows[dtb].Cells[2].Value = row["Role"].ToString();
+                Role_Grid_view.Rows[dtb].Cells[3].Value = row["Role_Status"].ToString();
+
+
+            }
         }
     }
 }
