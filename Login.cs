@@ -13,7 +13,7 @@ namespace Librart_Management_System
 {
     public partial class Login : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\admin lenovo\Documents\LibraryDB.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\admin lenovo\Documents\LibraryDB.mdf;Integrated Security=True;Connect Timeout=30");
         public Login()
         {
             InitializeComponent();
@@ -26,7 +26,8 @@ namespace Librart_Management_System
 
         private void Log_button_Click(object sender, EventArgs e)
         {
-             SqlDataAdapter sqlData = new SqlDataAdapter("select * from User_Info where User_ID = '"+Login_UserName_Label.Text+"' and User_Password= '"+Login_Password_Label.Text+"'", connection);
+            Connection connect = new Connection();
+             SqlDataAdapter sqlData = new SqlDataAdapter("select * from User_Info where User_ID = '"+Login_UserName_Label.Text+"' and User_Password= '"+Login_Password_Label.Text+"'", connect.ActiveConection());
             DataTable dataTable = new DataTable();
             sqlData.Fill(dataTable);
                 if (dataTable.Rows.Count==1)
