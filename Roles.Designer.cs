@@ -29,9 +29,9 @@ namespace Librart_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Role_ID_Label = new System.Windows.Forms.Label();
             this.Role_Name_Lb = new System.Windows.Forms.Label();
             this.Book_Status = new System.Windows.Forms.Label();
@@ -176,8 +176,10 @@ namespace Librart_Management_System
             this.Role_Grid_view.Location = new System.Drawing.Point(12, 204);
             this.Role_Grid_view.Name = "Role_Grid_view";
             this.Role_Grid_view.RowTemplate.Height = 25;
+            this.Role_Grid_view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Role_Grid_view.Size = new System.Drawing.Size(693, 205);
             this.Role_Grid_view.TabIndex = 5;
+            this.Role_Grid_view.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Role_Grid_view_MouseDoubleClick);
             // 
             // flowLayoutPanel1
             // 
@@ -189,23 +191,23 @@ namespace Librart_Management_System
             // 
             // role_column
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.role_column.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.role_column.DefaultCellStyle = dataGridViewCellStyle4;
             this.role_column.HeaderText = "Role ID";
             this.role_column.Name = "role_column";
             // 
             // Role_Name_column
             // 
             this.Role_Name_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Role_Name_column.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Role_Name_column.DefaultCellStyle = dataGridViewCellStyle5;
             this.Role_Name_column.HeaderText = "Role Name";
             this.Role_Name_column.Name = "Role_Name_column";
             // 
             // Status_Column
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Status_Column.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Status_Column.DefaultCellStyle = dataGridViewCellStyle6;
             this.Status_Column.HeaderText = "Status";
             this.Status_Column.Name = "Status_Column";
             // 

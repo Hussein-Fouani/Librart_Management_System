@@ -96,5 +96,13 @@ namespace Librart_Management_System
 
             }
         }
+
+        private void Role_Grid_view_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int n = Role_Grid_view.SelectedRows[0].Index;
+            Role_id_textbox.Text = Role_Grid_view.Rows[n].Cells[1].Value.ToString();
+            Role_Name_txtbx.Text = Role_Grid_view.Rows[n].Cells[2].Value.ToString();
+            status_cmbbx.Text = Role_Grid_view.Rows[n].Cells[3].Value.ToString();
+        }
     }
 }
