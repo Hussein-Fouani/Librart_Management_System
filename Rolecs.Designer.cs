@@ -78,6 +78,7 @@ namespace Librart_Management_System
             // 
             this.book_id_textbox.Location = new System.Drawing.Point(150, 39);
             this.book_id_textbox.Name = "book_id_textbox";
+            this.book_id_textbox.ReadOnly = true;
             this.book_id_textbox.Size = new System.Drawing.Size(215, 23);
             this.book_id_textbox.TabIndex = 2;
             // 
