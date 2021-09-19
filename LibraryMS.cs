@@ -70,7 +70,7 @@ namespace Librart_Management_System
 
         private void roleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Role objt = new Role();
+            Roles objt = new Roles();
             objt.MdiParent = this;
             objt.Show();
             objt.StartPosition = FormStartPosition.CenterScreen;

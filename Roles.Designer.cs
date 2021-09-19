@@ -29,40 +29,43 @@ namespace Librart_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.Book_ID_Label = new System.Windows.Forms.Label();
-            this.Book_Name_Lb = new System.Windows.Forms.Label();
+            this.Role_ID_Label = new System.Windows.Forms.Label();
+            this.Role_Name_Lb = new System.Windows.Forms.Label();
             this.Book_Status = new System.Windows.Forms.Label();
-            this.book_id_textbox = new System.Windows.Forms.TextBox();
-            this.bkname_txtbx = new System.Windows.Forms.TextBox();
+            this.Role_id_textbox = new System.Windows.Forms.TextBox();
+            this.Role_Name_txtbx = new System.Windows.Forms.TextBox();
             this.status_cmbbx = new System.Windows.Forms.ComboBox();
             this.New_Button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.Save_button = new System.Windows.Forms.Button();
             this.Update_Button = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Role_Grid_view = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.role_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role_Name_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.Role_Grid_view)).BeginInit();
             this.SuspendLayout();
             // 
-            // Book_ID_Label
+            // Role_ID_Label
             // 
-            this.Book_ID_Label.AutoSize = true;
-            this.Book_ID_Label.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Book_ID_Label.Location = new System.Drawing.Point(62, 41);
-            this.Book_ID_Label.Name = "Book_ID_Label";
-            this.Book_ID_Label.Size = new System.Drawing.Size(55, 17);
-            this.Book_ID_Label.TabIndex = 0;
-            this.Book_ID_Label.Text = "Book ID:";
+            this.Role_ID_Label.AutoSize = true;
+            this.Role_ID_Label.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Role_ID_Label.Location = new System.Drawing.Point(62, 41);
+            this.Role_ID_Label.Name = "Role_ID_Label";
+            this.Role_ID_Label.Size = new System.Drawing.Size(55, 17);
+            this.Role_ID_Label.TabIndex = 0;
+            this.Role_ID_Label.Text = "Book ID:";
             // 
-            // Book_Name_Lb
+            // Role_Name_Lb
             // 
-            this.Book_Name_Lb.AutoSize = true;
-            this.Book_Name_Lb.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Book_Name_Lb.Location = new System.Drawing.Point(62, 76);
-            this.Book_Name_Lb.Name = "Book_Name_Lb";
-            this.Book_Name_Lb.Size = new System.Drawing.Size(82, 17);
-            this.Book_Name_Lb.TabIndex = 1;
-            this.Book_Name_Lb.Text = "Book Name: ";
+            this.Role_Name_Lb.AutoSize = true;
+            this.Role_Name_Lb.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Role_Name_Lb.Location = new System.Drawing.Point(62, 76);
+            this.Role_Name_Lb.Name = "Role_Name_Lb";
+            this.Role_Name_Lb.Size = new System.Drawing.Size(82, 17);
+            this.Role_Name_Lb.TabIndex = 1;
+            this.Role_Name_Lb.Text = "Book Name: ";
             // 
             // Book_Status
             // 
@@ -74,20 +77,20 @@ namespace Librart_Management_System
             this.Book_Status.TabIndex = 1;
             this.Book_Status.Text = "Status: ";
             // 
-            // book_id_textbox
+            // Role_id_textbox
             // 
-            this.book_id_textbox.Location = new System.Drawing.Point(150, 39);
-            this.book_id_textbox.Name = "book_id_textbox";
-            this.book_id_textbox.ReadOnly = true;
-            this.book_id_textbox.Size = new System.Drawing.Size(215, 23);
-            this.book_id_textbox.TabIndex = 2;
+            this.Role_id_textbox.Location = new System.Drawing.Point(150, 39);
+            this.Role_id_textbox.Name = "Role_id_textbox";
+            this.Role_id_textbox.ReadOnly = true;
+            this.Role_id_textbox.Size = new System.Drawing.Size(215, 23);
+            this.Role_id_textbox.TabIndex = 2;
             // 
-            // bkname_txtbx
+            // Role_Name_txtbx
             // 
-            this.bkname_txtbx.Location = new System.Drawing.Point(150, 70);
-            this.bkname_txtbx.Name = "bkname_txtbx";
-            this.bkname_txtbx.Size = new System.Drawing.Size(215, 23);
-            this.bkname_txtbx.TabIndex = 2;
+            this.Role_Name_txtbx.Location = new System.Drawing.Point(150, 70);
+            this.Role_Name_txtbx.Name = "Role_Name_txtbx";
+            this.Role_Name_txtbx.Size = new System.Drawing.Size(215, 23);
+            this.Role_Name_txtbx.TabIndex = 2;
             // 
             // status_cmbbx
             // 
@@ -142,6 +145,7 @@ namespace Librart_Management_System
             this.Save_button.TabIndex = 4;
             this.Save_button.Text = "Save";
             this.Save_button.UseVisualStyleBackColor = false;
+            this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
             // Update_Button
             // 
@@ -158,14 +162,18 @@ namespace Librart_Management_System
             this.Update_Button.UseVisualStyleBackColor = false;
             this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
             // 
-            // dataGridView1
+            // Role_Grid_view
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 190);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 205);
-            this.dataGridView1.TabIndex = 5;
+            this.Role_Grid_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Role_Grid_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.role_column,
+            this.Role_Name_column,
+            this.Status_Column});
+            this.Role_Grid_view.Location = new System.Drawing.Point(12, 190);
+            this.Role_Grid_view.Name = "Role_Grid_view";
+            this.Role_Grid_view.RowTemplate.Height = 25;
+            this.Role_Grid_view.Size = new System.Drawing.Size(693, 205);
+            this.Role_Grid_view.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
@@ -175,27 +183,42 @@ namespace Librart_Management_System
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // role_column
+            // 
+            this.role_column.HeaderText = "Role";
+            this.role_column.Name = "role_column";
+            // 
+            // Role_Name_column
+            // 
+            this.Role_Name_column.HeaderText = "Role Name";
+            this.Role_Name_column.Name = "Role_Name_column";
+            // 
+            // Status_Column
+            // 
+            this.Status_Column.HeaderText = "Status";
+            this.Status_Column.Name = "Status_Column";
+            // 
             // Rolecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 430);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Role_Grid_view);
             this.Controls.Add(this.Update_Button);
             this.Controls.Add(this.Save_button);
             this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.New_Button);
             this.Controls.Add(this.status_cmbbx);
-            this.Controls.Add(this.bkname_txtbx);
-            this.Controls.Add(this.book_id_textbox);
+            this.Controls.Add(this.Role_Name_txtbx);
+            this.Controls.Add(this.Role_id_textbox);
             this.Controls.Add(this.Book_Status);
-            this.Controls.Add(this.Book_Name_Lb);
-            this.Controls.Add(this.Book_ID_Label);
+            this.Controls.Add(this.Role_Name_Lb);
+            this.Controls.Add(this.Role_ID_Label);
             this.Name = "Rolecs";
             this.Text = "Rolecs";
             this.Load += new System.EventHandler(this.Rolecs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Role_Grid_view)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,17 +226,20 @@ namespace Librart_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Label Book_ID_Label;
-        private System.Windows.Forms.Label Book_Name_Lb;
+        private System.Windows.Forms.Label Role_ID_Label;
+        private System.Windows.Forms.Label Role_Name_Lb;
         private System.Windows.Forms.Label Book_Status;
-        private System.Windows.Forms.TextBox book_id_textbox;
-        private System.Windows.Forms.TextBox bkname_txtbx;
+        private System.Windows.Forms.TextBox Role_id_textbox;
+        private System.Windows.Forms.TextBox Role_Name_txtbx;
         private System.Windows.Forms.ComboBox status_cmbbx;
         private System.Windows.Forms.Button New_Button;
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button Save_button;
         private System.Windows.Forms.Button Update_Button;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Role_Grid_view;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn role_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_Name_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status_Column;
     }
 }
