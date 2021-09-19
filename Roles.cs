@@ -25,12 +25,13 @@ namespace Librart_Management_System
         void UpdateRecords()
         {
             Connection connection = new();
-            SqlCommand sql = new("update Role_Master where '" + Role_id_textbox.Text +"'", connection.ActiveConection());
+            SqlCommand sql = new("update Role_Master set Role_ID= '" + Role_id_textbox.Text +"' ,Role ='"+Role_Name_txtbx.Text+"',Role_Status='"+status_cmbbx.Text+"' where Role_ID = '" + Role_id_textbox.Text +"'", connection.ActiveConection());
             sql.ExecuteNonQuery();
         }
         private void Update_Button_Click(object sender, EventArgs e)
         {
-
+            UpdateRecords();
+            ViewDataInGrid();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -95,6 +96,7 @@ namespace Librart_Management_System
 
 
             }
+            Count_Label.Text = "Row Count : " + dt.Rows.Count.ToString();
         }
 
         private void Role_Grid_view_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -103,6 +105,24 @@ namespace Librart_Management_System
             Role_id_textbox.Text = Role_Grid_view.Rows[n].Cells[1].Value.ToString();
             Role_Name_txtbx.Text = Role_Grid_view.Rows[n].Cells[2].Value.ToString();
             status_cmbbx.Text = Role_Grid_view.Rows[n].Cells[3].Value.ToString();
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+            DeleteRecord();
+            ViewDataInGrid();
+
+        }
+        void DeleteRecord()
+        {
+            Connection connection = new();
+            SqlCommand sql = new("Delete from Role_Master where Role_ID= '" + Role_id_textbox.Text + "' " , connection.ActiveConection());
+            sql.ExecuteNonQuery();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

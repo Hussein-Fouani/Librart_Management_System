@@ -47,6 +47,7 @@ namespace Librart_Management_System
             this.role_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_Name_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Role_Grid_view)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,6 +135,7 @@ namespace Librart_Management_System
             this.Delete_button.TabIndex = 4;
             this.Delete_button.Text = "Delete";
             this.Delete_button.UseVisualStyleBackColor = false;
+            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // Save_button
             // 
@@ -211,11 +213,23 @@ namespace Librart_Management_System
             this.Status_Column.HeaderText = "Status";
             this.Status_Column.Name = "Status_Column";
             // 
+            // Count_Label
+            // 
+            this.Count_Label.AutoSize = true;
+            this.Count_Label.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.Count_Label.Location = new System.Drawing.Point(620, 425);
+            this.Count_Label.Name = "Count_Label";
+            this.Count_Label.Size = new System.Drawing.Size(83, 16);
+            this.Count_Label.TabIndex = 7;
+            this.Count_Label.Text = "Rows Count: ";
+            this.Count_Label.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Rolecs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 430);
+            this.ClientSize = new System.Drawing.Size(735, 449);
+            this.Controls.Add(this.Count_Label);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Role_Grid_view);
             this.Controls.Add(this.Update_Button);
@@ -254,5 +268,6 @@ namespace Librart_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn role_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role_Name_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status_Column;
+        private System.Windows.Forms.Label Count_Label;
     }
 }
