@@ -222,7 +222,6 @@ namespace Librart_Management_System
             this.Count_Label.Size = new System.Drawing.Size(83, 16);
             this.Count_Label.TabIndex = 7;
             this.Count_Label.Text = "Rows Count: ";
-            this.Count_Label.Click += new System.EventHandler(this.label1_Click);
             // 
             // Rolecs
             // 

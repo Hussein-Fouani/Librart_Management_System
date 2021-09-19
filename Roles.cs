@@ -44,8 +44,6 @@ namespace Librart_Management_System
           
             CreateNewData();
             ViewDataInGrid();
-
-
         }
         
         void CreateNewData()
@@ -53,7 +51,6 @@ namespace Librart_Management_System
             Role_id_textbox.Clear();
             Role_Name_txtbx.Clear();
             status_cmbbx.SelectedItem = -1;
-
             Connection connection = new();
             SqlDataAdapter sqlData = new ("USR_ROLE", connection.ActiveConection());
             sqlData.SelectCommand.CommandType = CommandType.StoredProcedure;
@@ -118,11 +115,6 @@ namespace Librart_Management_System
             Connection connection = new();
             SqlCommand sql = new("Delete from Role_Master where Role_ID= '" + Role_id_textbox.Text + "' " , connection.ActiveConection());
             sql.ExecuteNonQuery();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
